@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #000000;
+    background-color: #ffffff;
 }
 
 .card-container {
@@ -54,17 +54,11 @@ body {
     margin: 20px 0;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .card button:hover {
     background-color: #005f7f;
     transform: scale(1.1);
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 900px) {
