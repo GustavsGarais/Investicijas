@@ -10,7 +10,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "C:\\Users\\gg00186\\Investicijas\\Uzdevumi\\karte_ar_hover_efektiem\\Card.html"
+            "file": "Uzdevumi/Karte_hovers_v2/Cardv2.html"
         }
     ]
 }
