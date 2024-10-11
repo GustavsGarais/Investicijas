@@ -14,18 +14,24 @@
             <img src="racoon_logo.png" alt="Logo">
         </div>
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Follow</a></li>
-            <li><a href="#">Settings</a></li>
+            <li><a href="#">Home</a> </li>
+            <li><a href="#">Follow</a> </li>
+            <li class="dropdown">
+                <a href="#">Settings</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Dark Mode</a> </li>
+                </ul>
+            </li>
             <li class="dropdown">
                 <a href="#">Services</a>
                 <ul class="dropdown-content">
-                    <li><a href="#">Web Development</a></li>
-                    <li><a href="#">Design</a></li>
-                    <li><a href="#">SEO</a></li>
+                    <li><a href="#">Web Development</a> </li>
+                    <li><a href="#">Design</a> </li>
+                    <li><a href="#">SEO</a> </li>
                 </ul>
             </li>
             <li><a href="#">Contact</a></li>
+
         </ul>
         <div class="burger">
             <i class="fas fa-bars"></i>
@@ -52,15 +58,5 @@
             <button class="learn-more-btn" onclick="window.location.href='https://getsmartratsolutions.com/8-interesting-and-scary-facts-about-raccoons/'">Uzzināt vairāk</button>
         </div>
     </section>
-
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2 id="modal-title"></h2>
-            <p id="modal-description"></p>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
