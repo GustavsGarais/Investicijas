@@ -39,7 +39,7 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgb(101, 187, 98);
+    background-color: rgb(75, 202, 70);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
     z-index: 1;
     list-style: none;
@@ -75,7 +75,7 @@ body {
         position: absolute;
         top: 60px;
         right: 0;
-        background: linear-gradient(45deg, #7fff5f, #3eff03);
+        background: linear-gradient(45deg, #55d32e, #3eff03);
         width: 100%;
     }
 
@@ -124,6 +124,49 @@ body {
     color: #333;
     text-align: center;
     margin: 10px 0;
+}
+
+/*Popup texts*/
+.popuptext {
+    visibility: hidden;
+    min-width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.popuptext.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 6px;
 }
 
 .card p {
@@ -203,3 +246,5 @@ body {
         width: 80%;
     }
 }
+
+
