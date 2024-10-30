@@ -11,13 +11,14 @@
     <script src="scrpit.js"></script>
     <nav class="navbar">
         <div class="logo">
-            <img src="racoon_logo.png" alt="Logo">
+            <img src="racoon_logo.png" alt="Logo"> 
+            <h3>The Raccoon Cave</h3>
         </div>
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Follow</a></li>
+            <li><a href="#" ><h3>Home<h3></a></li>
+            <li><a href="#" id="loadBlogs"><h3>Blog</h3></a></li>
             <li class="dropdown">
-                <a href="#">Info box</a>
+                <a href="#"><h3>Info box</h3></a>
                 <ul class="dropdown-content">
                     <li><a href="#" class="web-dev" data-info-box="info-box-web">Web Development</a></li>
                     <li><a href="#" class="design" data-info-box="info-box-design">Design</a></li>
@@ -25,16 +26,18 @@
                 </ul>
             </li>
             <li class="dropdown">
-                <a href="#">Services</a>
+                <a href="#"><h3>Services</h3></a>
                 <ul class="dropdown-content">
                     <li><a href="#">No</a></li>
                 </ul>
             </li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#"><h3>Contact</h3></a></li>
         </ul>
         <div class="burger">
             <i class="fas fa-bars"></i>
         </div>
+        <!-- Reads the -->
+        <div id="Content"></div>
     </nav>
 
     <section class="cards">
@@ -47,7 +50,7 @@
         <div class="card">
             <img src="raccoons2.jpg" alt="Raccon Website">
             <h3>Raccon Website</h3>
-            <p>Racooooons.</p>
+            <p>Raccooooons.</p>
             <button class="learn-more-btn" onclick="togglePopup()">Uzzināt vairāk</button>
         </div>
         <div class="card">
@@ -92,7 +95,25 @@
                 infoBox.style.display = infoBox.style.display === 'block' ? 'none' : 'block';
             });
         });
+
+
+        document.getElementById('loadBlogs').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+            fetch('Blog.html') // Make sure the filename matches
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('Blog').innerHTML = data; // Use 'Blog' ID here
+                })
+                .catch(error => {
+                    console.error('Error loading the HTML file:', error);
+                    document.getElementById('Blog').innerHTML = '<p>Failed to load Blog. Please try again later.</p>';
+                });
+        });
     </script>
 </body>
 </html>
-
