@@ -16,7 +16,7 @@
         </div>
         <ul class="nav-links">
             <li><a href="#" ><h3>Home<h3></a></li>
-            <li><a href="#" id="loadBlogs"><h3>Blog</h3></a></li>
+            <li><a href="Blog.html" ><h3>Blog</h3></a></li> <!-- Blog page-->>
             <li class="dropdown">
                 <a href="#"><h3>Info box</h3></a>
                 <ul class="dropdown-content">
@@ -97,23 +97,6 @@
         });
 
 
-        document.getElementById('loadBlogs').addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent the default link behavior
-            fetch('Blog.html') // Make sure the filename matches
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok ' + response.statusText);
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    document.getElementById('Blog').innerHTML = data; // Use 'Blog' ID here
-                })
-                .catch(error => {
-                    console.error('Error loading the HTML file:', error);
-                    document.getElementById('Blog').innerHTML = '<p>Failed to load Blog. Please try again later.</p>';
-                });
-        });
     </script>
 </body>
 </html>
